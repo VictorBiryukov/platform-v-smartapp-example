@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model model-name="ds_anagramdataspace_82cc13c4_2a6c_4c57_9" version="0.0.3">
+  <layout>
+    <model/>
+    <classes>
+      <class name="Word">
+        <property name="data" x="699" y="145"/>
+        <property name="symbols" x="699" y="205"/>
+        <property name="length" x="699" y="265"/>
+      </class>
+    </classes>
+  </layout>
+  <class name="Word" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="data" type="STRING" label="Слово кириллицей (только буквы)" length="64" mandatory="true" mask="[а-яё]+"/>
+    <property name="length" type="SHORT" label="Длина слова" mandatory="true"/>
+    <index unique="true">
+      <property name="data"/>
+    </index>
+    <index unique="false">
+      <property name="length"/>
+    </index>
+  </class>
+</model>

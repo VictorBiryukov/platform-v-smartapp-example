@@ -1,0 +1,39 @@
+{
+  "project" : {
+    "id" : "workshop_canvas-263140-Cmi",
+    "name" : "workshop_canvas-263140-Cmi",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "default"
+    },
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ {
+    "id" : 311312,
+    "path" : "/NumberOfLetters",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "@number"
+    } ],
+    "patterns" : [ "* @number *" ],
+    "slots" : [ {
+      "name" : "@number",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false,
+      "client" : false
+    } ]
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}
